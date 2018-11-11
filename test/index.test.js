@@ -1,3 +1,6 @@
+const chai = require('chai');
+global.assert = chai.assert;
+
 describe('the test suite', function() {
   it('always passes', function() {
     assert.isTrue(true);
