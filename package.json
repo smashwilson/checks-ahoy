@@ -4,7 +4,7 @@
   "description": "This package exists entirely to experiment with GitHub's Checks API.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json"
   },
   "repository": {
     "type": "git",
