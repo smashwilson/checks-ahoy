@@ -5,6 +5,8 @@ steps:
 - bash: npm ci
   displayName: install npm dependencies
 - bash: npm test
+  env:
+    LOOK_A_FAILURE: $(look.aFailure)
   displayName: unit tests
 - task: PublishTestResults@2
   inputs:
