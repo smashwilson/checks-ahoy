@@ -2,6 +2,8 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
+- bash: npm ci
+  displayName: install npm dependencies
 - bash: npm test
   displayName: unit tests
 - task: PublishTestResults@2
