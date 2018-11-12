@@ -5,8 +5,8 @@ steps:
 - bash: npm test
   displayName: unit tests
 - task: PublishTestResults@2
-    inputs:
-      testResultsFormat: JUnit
-      testResultsFiles: test-results.xml
-      testRunTitle: Test Results
-    condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: JUnit
+    testResultsFiles: test-results.xml
+    testRunTitle: Test Results
+  condition: succeededOrFailed()
