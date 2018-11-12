@@ -1,0 +1,12 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- bash: npm test
+  displayName: unit tests
+- task: PublishTestResults@2
+    inputs:
+      testResultsFormat: JUnit
+      testResultsFiles: test-results.xml
+      testRunTitle: Test Results
+    condition: succeededOrFailed()
