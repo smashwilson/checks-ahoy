@@ -7,6 +7,7 @@ steps:
 - bash: npm test
   env:
     LOOK_A_FAILURE: $(look.aFailure)
+    FLAKE_IT_GOOD: $(flake.itGood)
   displayName: unit tests
 - task: PublishTestResults@2
   inputs:
